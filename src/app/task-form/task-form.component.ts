@@ -14,6 +14,8 @@ newTask: string;
   }
 addTodo()
 {
-this.taskList.push(this.newTask);
+this.taskList.unshift(this.newTask);
+localStorage.setItem("tasks",JSON.stringify(this.taskList))
+this.newTask="";
 }
 }
